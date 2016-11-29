@@ -1,0 +1,23 @@
+{
+    "name": "weprovide/magento2-module-dompdf",
+    "description": "Result class for rendering a PDF using Dompdf",
+    "authors": [
+        {
+            "email": "tim@weprovide.com",
+            "name": "Tim Neutkens"
+        }
+    ],
+    "license": "MIT",
+    "minimum-stability": "stable",
+    "require": {
+        "dompdf/dompdf": "^0.7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "WeProvide\\Dompdf\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}
