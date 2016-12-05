@@ -13,6 +13,8 @@ class Dompdf extends AbstractResult
 
     protected $attachment = 'attachment';
 
+    protected $output;
+
     /**
      * Dompdf constructor.
      */
@@ -58,10 +60,14 @@ class Dompdf extends AbstractResult
      */
     public function renderOutput()
     {
-        $pdf = clone $this->pdf;
-        $pdf->render();
+        if($this->output) {
+            return $this->output;
+        }
 
-        return $pdf->output();
+        $this->pdf->render();
+        $this->output = $this->pdf->output();
+
+        return $this->output;
     }
 
     /**

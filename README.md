@@ -143,6 +143,6 @@ All public methods are listed below:
 
 `public function setAttachment($mode)` => Mode can either be `attachment` (download) or `inline` (no download).
 
-`public function renderOutput()` => Equal to `$dompdf->output()`. will automatically render.
+`public function renderOutput()` => Equal to running `$dompdf->render()` & `$dompdf->output()`. Will cache the output since Dompdf doesn't support rendering twice
 
 For reference also check [the code](Controller/Result/Dompdf.php)
