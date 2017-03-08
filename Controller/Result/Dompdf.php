@@ -34,6 +34,15 @@ class Dompdf extends AbstractResult
     }
 
     /**
+     * Set output from $this->renderOutput() to allow multiple renders
+     *
+     * @param $output
+     */
+    public function setOutput($output) {
+        $this->output = $output;
+    }
+
+    /**
      * Set filename
      *
      * @param $fileName
@@ -65,9 +74,8 @@ class Dompdf extends AbstractResult
         }
 
         $this->pdf->render();
-        $this->output = $this->pdf->output();
 
-        return $this->output;
+        return $this->pdf->output();
     }
 
     /**
