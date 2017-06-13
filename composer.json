@@ -1,6 +1,7 @@
 {
     "name": "weprovide/magento2-module-dompdf",
     "description": "Result class for rendering a PDF using Dompdf",
+    "type": "magento2-module",
     "authors": [
         {
             "email": "tim@weprovide.com",
