@@ -3,6 +3,7 @@ namespace WeProvide\Dompdf\Controller\Result;
 
 use Dompdf\Dompdf as PDF;
 use Magento\Framework\App\ResponseInterface;
+use Magento\Framework\App\Response\HttpInterface as HttpResponseInterface;
 use Magento\Framework\Controller\AbstractResult;
 
 class Dompdf extends AbstractResult
@@ -85,7 +86,7 @@ class Dompdf extends AbstractResult
      *
      * @return $this
      */
-    protected function render(ResponseInterface $response)
+    protected function render(HttpResponseInterface $response)
     {
         $output = $this->renderOutput();
 
